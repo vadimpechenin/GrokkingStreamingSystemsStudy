@@ -10,7 +10,7 @@ import com.streamwork.ch02.api.Event;
 import com.streamwork.ch02.api.Operator;
 
 class VehicleCounter extends Operator {
-  private final Map<String, Integer> countMap = new HashMap<String, Integer>();
+  protected final Map<String, Integer> countMap = new HashMap<String, Integer>();
 
   public VehicleCounter(String name) {  super(name);  }
 
@@ -24,7 +24,7 @@ class VehicleCounter extends Operator {
     printCountMap();
   }
 
-  private void printCountMap() {
+  protected void printCountMap() {
     List<String> vehicles = new ArrayList<>(countMap.keySet());
     Collections.sort(vehicles);
 
